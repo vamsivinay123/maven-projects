@@ -19,7 +19,7 @@ pipeline{
 					echo "failed to genearte artifact"
 				}
 			}
-		
+		}
 		stage("Deploy to stagging and checking code quality"){
 			parallel{
 				stage("DEPLOY TO STAGING"){
