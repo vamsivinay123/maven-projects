@@ -52,7 +52,7 @@ pipeline{
 				timeout(time: 4, unit: 'HOURS') {
 					input 'Deploy an application to production?'			
 				}
-				deploy adapters: [tomcat9(credentialsId: 'a11e1392-50ad-4b6d-9572-85f786ba65bd', path: '', url: 'http://localhost:2023')], contextPath: null, war: '**/*.war'
+				deploy adapters: [tomcat9(credentialsId: 'a11e1392-50ad-4b6d-9572-85f786ba65bd', path: '', url: 'http://localhost:2323')], contextPath: null, war: '**/*.war'
 			}
 			post{
 					success{
