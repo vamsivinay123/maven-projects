@@ -9,7 +9,7 @@ pipeline{
 			stages{
 
 				stage("Package"){
-					step{
+					steps{
 						bat label: '', script: 'mvn clean package'
 					}
 				post{
@@ -26,7 +26,7 @@ pipeline{
 
 
 			stage("Deploy to staging"){
-				step{
+				steps{
 					build 'maven-webapp-delpoy-to-stagging'
 				}
 				post{
@@ -42,7 +42,7 @@ pipeline{
 
 
 			stage("Checking code quality"){
-				step{
+				steps{
 					build 'maven-webapp-checkstyle'
 				}
 			}
